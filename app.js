@@ -1,4 +1,3 @@
-console.log('\n----------\n');
 /*
 Exercise 1: maxOfTwoNumbers()
 
@@ -40,7 +39,8 @@ const isAdult = (inputAge) => {
     }
 }
 
-console.log('Exercise 2 Result:', isAdult(21));
+console.log('Exercise 2 Result (21):', isAdult(21));
+console.log('Exercise 2 Result (17):', isAdult(17));
 
 console.log('\n----------\n')
 
@@ -67,7 +67,8 @@ const isCharAVowel = (inputChar) => {
 
 }
 
-console.log('Exercise 3 Result:', isCharAVowel("a"));
+console.log('Exercise 3 Result (a):', isCharAVowel("a"));
+console.log('Exercise 3 Result (b):', isCharAVowel("b"));
 
 console.log('\n----------\n')
 
@@ -191,8 +192,8 @@ const convertTemperature = (temperature, scale) => {
         return "Ensure you are inputting C or F in the scale or a valid temperature."
     }
 }
-console.log('Exercise 8 First Result:', convertTemperature(32, "C"));
-console.log('Exercise 8 Second Result:', convertTemperature(32, "F"));
+console.log('Exercise 8 Result (to Fahrenheit):', convertTemperature(32, "C"));
+console.log('Exercise 8 Result (to Celsius):', convertTemperature(32, "F"));
 
 console.log('\n----------\n');
 
