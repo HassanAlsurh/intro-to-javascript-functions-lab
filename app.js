@@ -195,7 +195,7 @@ const convertTemperature = (temperature, scale) => {
 console.log('Exercise 8 Result (to Fahrenheit):', convertTemperature(32, "C"));
 console.log('Exercise 8 Result (to Celsius):', convertTemperature(32, "F"));
 
-console.log('\n----------\n');
+console.log('\n----------\n')
 
 /*
 Exercise 9: basicCalculator()
@@ -241,3 +241,113 @@ console.log('Exercise 9 Result (subtract): ', basicCalculator(10, 5, "subtract")
 console.log('Exercise 9 Result (multiply): ', basicCalculator(10, 5, "multiply"));
 console.log('Exercise 9 Result (divide): ', basicCalculator(10, 5, "divide"));
 console.log('Exercise 9 Result (multiply by zero): ', basicCalculator(10, 0, "multiply"));
+
+console.log('\n----------\n')
+
+/*
+Exercise 10: calculateGrade()
+
+Define a function called calculateGrade. 
+It should take a numerical score and return the corresponding letter 
+grade (A, B, C, D, F). 
+
+For example, 90 and above yields an 'A', 80-89 is a 'B', 
+and 70-79 is a 'C', 60-69 is a 'D' and anything lower than a 60 is an 'F'.
+
+Example: calculateGrade(100) should return A.
+
+Complete the exercise in the space below:
+*/
+
+const calculateGrade = (inputScore) => {
+    if (inputScore >= 90) {
+        return 'A'
+    }
+    else if (inputScore >= 80) {
+        return 'B'
+    }
+    else if (inputScore >= 70) {
+        return 'C'
+    }
+    else if (inputScore >= 60) {
+        return 'D'
+    }
+    else {
+        return 'F'
+    }
+}
+
+console.log('Exercise 10 Result (95):', calculateGrade(95));
+console.log('Exercise 10 Result (85)', calculateGrade(85));
+console.log('Exercise 10 Result (59):', calculateGrade(59));
+
+console.log('\n----------\n')
+
+/*
+Exercise 11: createUsername()
+
+Define a function called createUsername. 
+It should take a first name and a last name and return a username. 
+
+The username should be a combination of the following:
+- The first three letters of the first name.
+- The first three letters of the last name.
+- The total character count of the first and last name combined.
+
+Example: createUsername('Samantha', 'Green') should return 'SamGre13'.
+
+Complete the exercise in the space below:
+*/
+
+const createUsername = (fName, lName) => {
+
+    //Used Ai here to figure out which default function does trim text in JS
+
+    let newFName = fName.substring(0,3)
+    let newLName = lName.substring(0,3)
+    let fullNameLength = fName.length + lName.length
+
+    return newFName+newLName+fullNameLength
+
+}
+
+console.log('Exercise 11 Result:', createUsername("Samantha", "Green"));
+
+console.log('\n----------\n')
+
+/*
+Exercise 12: numArgs()
+
+Challenge yourself with numArgs. 
+This function should return the count of arguments passed to it when called.
+
+Complete the exercise in the space below:
+*/
+// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+// const numArgs = () => {
+//     //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions#using_the_arguments_object
+
+//     let argNumber = 0
+//     for (let index = 0; index < arguments.length; index++) {
+        
+//         argNumber++
+//     }
+//     return argNumber
+// }  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+//------------------Arrow functions dont have "arguments" Object by default according to Gemini so I need to use the regular function syntax
+
+function numArgs() {
+    //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions#using_the_arguments_object
+
+    let argNumber = 0
+    for (let index = 0; index < arguments.length; index++) {
+        
+        argNumber++
+    }
+    return argNumber
+}
+
+console.log('Exercise 12 Result (4):', numArgs(1, 2, 3, 4));
+console.log('Exercise 12 Result (6):', numArgs(1, 2, 3, 4, 5, 6));
+console.log('Exercise 12 Result (10):', numArgs(1, 2, 3, 4, 5 , 6 ,7, 8, 9, 10));
