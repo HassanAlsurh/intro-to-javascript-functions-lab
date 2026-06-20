@@ -303,11 +303,11 @@ const createUsername = (fName, lName) => {
 
     //Used Ai here to figure out which default function does trim text in JS
 
-    let newFName = fName.substring(0,3)
-    let newLName = lName.substring(0,3)
+    let newFName = fName.substring(0, 3)
+    let newLName = lName.substring(0, 3)
     let fullNameLength = fName.length + lName.length
 
-    return newFName+newLName+fullNameLength
+    return newFName + newLName + fullNameLength
 
 }
 
@@ -329,7 +329,7 @@ Complete the exercise in the space below:
 
 //     let argNumber = 0
 //     for (let index = 0; index < arguments.length; index++) {
-        
+
 //         argNumber++
 //     }
 //     return argNumber
@@ -342,7 +342,7 @@ function numArgs() {
 
     let argNumber = 0
     for (let index = 0; index < arguments.length; index++) {
-        
+
         argNumber++
     }
     return argNumber
@@ -350,4 +350,4 @@ function numArgs() {
 
 console.log('Exercise 12 Result (4):', numArgs(1, 2, 3, 4));
 console.log('Exercise 12 Result (6):', numArgs(1, 2, 3, 4, 5, 6));
-console.log('Exercise 12 Result (10):', numArgs(1, 2, 3, 4, 5 , 6 ,7, 8, 9, 10));
+console.log('Exercise 12 Result (10):', numArgs(1, 2, 3, 4, 5, 6, 7, 8, 9, 10));
